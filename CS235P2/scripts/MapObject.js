@@ -3,12 +3,13 @@ function MapObject (mapID, inactiveColor, activeColor)
 	this.mapID = mapID;
 	this.activeColor = activeColor;
 	this.inactiveColor = inactiveColor;
-	
+	var container = $("#canvas");
 	// Instantiate the Raphael objecct
-	var R = Raphael (mapID, 632, 470);
-	
-	var duration = 100;
-		
+	var R = Raphael (mapID,  container.width(), container.height());
+	var panZoom = R.panzoom({ initialZoom: 0, initialPosition: { x: 120, y: 70} });
+	var duration = 200;
+	panZoom.enable();
+    R.safari();	
 	// Setup attributes for each state
 	var attr = 
 	{
@@ -221,20 +222,31 @@ function MapObject (mapID, inactiveColor, activeColor)
 			}) (usa[state]);
 			
 		}
+		$("#canvas #up").click(function (e) {
+        panZoom.zoomIn(1);
+        e.preventDefault();
+		});
+
+		$("#canvas #down").click(function (e) {
+        panZoom.zoomOut(1);
+        e.preventDefault();
+		});
 }
 
 //MapObject.prototype.createDialog = createDialog;
 function draw(abbr)
 {
+	var name = abbr[abbr.length-2] + abbr[abbr.length-1];
+	console.log(name);
 	 $("#dialog").dialog({
-		title: 	 abbr,
+		title: 	 name,
 		modal: true,
 		resizable: false,
-		draggable: false,
+		draggable: true,
 		open:function ()
 		{
 			$('#ok a').bind('click', function() {
-				drawElements(abbr);
+				drawElements(name);
 			});
 			$('#cancel a').bind ('click', function () {
 				 $("#dialog").dialog ('close');

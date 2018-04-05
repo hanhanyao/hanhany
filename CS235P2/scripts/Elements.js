@@ -1,6 +1,6 @@
-function drawElements(abbr){
+function drawElements(name){
     //console.log(abbr);
-    var n = abbrState(abbr,'name');
+    var n = abbrState(name,'name');
     drawPicture(n);
     //console.log(n);
 }

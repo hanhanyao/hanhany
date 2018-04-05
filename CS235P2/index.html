@@ -6,10 +6,12 @@
 <title></title>
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="css/map.css" rel="stylesheet" type="text/css"/>
+		<link href="css/raphael.pan-zoom.css" rel="stylesheet" type="text/css"/>
     </head>
 <body>
         <div id="canvas" class="butran">
-        	<p class="info-copy">Click on a state or select a state from the pull-down menu. A new window will launch the details of traveling in this area.</p>
+			<div id="mapControls"><a id="up" href="javascript:;"></a><a id="down" href="javascript:;"></a></div>
+        	<p class="info-copy">Click on a state or select a state from the pull-down menu. Detailed traveling information about this state will be provided.</p>
             <div id="state-form">
                 <form action="">
                     <select name="state" id="states">
@@ -78,6 +80,7 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <script src="scripts/raphael.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/raphael.pan-zoom.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/MapObject.js" type="text/javascript" charset="utf-8"></script>
 		<script src = "scripts/Elements.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">

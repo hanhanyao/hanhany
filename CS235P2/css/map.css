@@ -3,11 +3,10 @@
 
 #canvas
 {
-	width: 597px;
-	height: 468px;	
-	padding:15px 10px 0 25px;
+	width: 800px;
+	height: 400x;	
+	padding:15px 0px 25px;
 }
-
 .butran
 {
 	background: #FFF url(../images/butran-map-bg.jpg) no-repeat;
@@ -20,15 +19,15 @@
 
 #canvas .info-copy
 {
-	color: #FFF;
+	color: #000;
 	font-family: Helvetica, Arial, sans-serif;	
 	font-size: 14px;
-	width: 360px;
+	width: 560px;
 	float: left;
-	padding: 0;
-	margin: 0;
+	padding: 0px 0px 0px;
+	margin: 30px 50px 0px;
 	position: relative;
-	z-index: 100;
+	z-index: 150;
 	line-height: 16px;
 }
 
@@ -44,9 +43,13 @@
 	float: right;	
 	position: relative;
 	z-index: 101;
+	top: -30px
 }
 
 #canvas #state-form select
 {
-	width: 165px;	
+	width: 150px;	
 }
+#canvas #mapControls { position: absolute; left: 15px; top: 40px; width: 29px; }
+#canvas #mapControls #up { background: url(../images/iconUp.png) no-repeat center top; display: block; height: 26px; width: 29px; }
+#canvas #mapControls #down { background: url(../images/iconDown.png) no-repeat center top; display: block; height: 27px; width: 29px; }
