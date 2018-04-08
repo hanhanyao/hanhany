@@ -1,3 +1,4 @@
+//MapObject(id,1,1);
 function MapObject (mapID, inactiveColor, activeColor)
 {
 	this.mapID = mapID;
@@ -157,13 +158,13 @@ function MapObject (mapID, inactiveColor, activeColor)
 					if (state.name == '') return;
 					
 					//var newURL = baseURL + state.name + '/';				
-					draw(state.name);				
+					drawElements(state.name);
 				});
 				
 				// Text click
 				text.click (function () {
 					//var newURL = baseURL + state.name + '/';				
-					draw(state.name);				
+					drawElements(state.name);				
 				});
 				
 				// State mouse over
@@ -233,28 +234,3 @@ function MapObject (mapID, inactiveColor, activeColor)
 		});
 }
 
-//MapObject.prototype.createDialog = createDialog;
-function draw(abbr)
-{
-	var name = abbr[abbr.length-2] + abbr[abbr.length-1];
-	console.log(name);
-	 $("#dialog").dialog({
-		title: 	 name,
-		modal: true,
-		resizable: false,
-		draggable: true,
-		open:function ()
-		{
-			$('#ok a').bind('click', function() {
-				drawElements(name);
-			});
-			$('#cancel a').bind ('click', function () {
-				 $("#dialog").dialog ('close');
-			});
-		},
-		close:function ()
-		{
-			$('#cancel a').unbind ('click');
-		}
-	 });
-}

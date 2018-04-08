@@ -6,6 +6,7 @@
 <title></title>
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
         <link href="css/map.css" rel="stylesheet" type="text/css"/>
+		<link href="css/Elements.css" rel = "stylesheet" type = "text/css"/>
 		<link href="css/raphael.pan-zoom.css" rel="stylesheet" type="text/css"/>
     </head>
 <body>
@@ -72,23 +73,24 @@
             </div>
             <div id="paper"></div>
         </div>
+		<img id="my_images" style="visibility: hidden" src="images/California.jpg">
         
-        <div id="dialog" title="Dialog Title" style="display: none;">
-            <div id="cancel"><a href="#">Cancel</a></div>
-            <div id="ok"><a href=#">OK</a></div>
-        </div>
+		<div id = "hist"></div>
+		
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <script src="scripts/raphael.js" type="text/javascript" charset="utf-8"></script>
 		<script src="scripts/raphael.pan-zoom.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/MapObject.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/d3.v4.min.js"></script>
 		<script src = "scripts/Elements.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
 			$(document).ready (function () {
 				// Change of drop down
 				$('#states').change (function () {
 					var abbr = $(this).val ();
-					m.draw (abbr);
+					drawElements(abbr);
+					
 					//console.log(name);
 				});
 				

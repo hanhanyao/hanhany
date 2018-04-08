@@ -7,15 +7,7 @@
 	height: 400x;	
 	padding:15px 0px 25px;
 }
-.butran
-{
-	background: #FFF url(../images/butran-map-bg.jpg) no-repeat;
-}
 
-.oxycontin
-{
-	background: #FFF url(../images/oxycontin-map-bg.jpg) no-repeat;
-}
 
 #canvas .info-copy
 {
@@ -34,7 +26,8 @@
 #canvas #paper
 {
 	position: relative;
-	left: 20px;
+	left: 50px;
+	right: 50px;
 	top: 15px;
 }
 

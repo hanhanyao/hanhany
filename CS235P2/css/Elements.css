@@ -1,0 +1,25 @@
+hist {
+  font: 10px sans-serif;
+  height: 400x;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: red ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
