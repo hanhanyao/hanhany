@@ -1,7 +1,10 @@
+/* Sign:
+	 *
+	 */
 function drawElements(name){
     //console.log(name);
     var n = abbrState(name,'name');
-    console.log(n);
+    //console.log(n);
     drawHistogram(n);
     showImage(n);
     //drawHistogram(n);
@@ -9,14 +12,14 @@ function drawElements(name){
 var isFirst = 0;
 var preimage;
 function showImage(name) {
-    console.log(name);
+    //console.log(name);
     if(isFirst === 1){
         
         preimage.style.display='none';
         
     }
     var img = document.getElementById(name);
-    console.log(img);
+    //console.log(img);
     img.style.display='block';
     preimage = img;
     isFirst = 1;
@@ -138,7 +141,7 @@ function drawHistogram(name){
   {temp: (58+40)/2, month: 'November'},
   {temp: (47+31)/2, month: 'December'}
 ];
-  states.Conneticut = [
+  states.Connecticut = [
   {temp: (37+23)/2, month: 'January'},
   {temp: (40+25)/2, month: 'February'},
   {temp: (47+31)/2, month: 'March'},
@@ -833,6 +836,7 @@ svg.append("text")
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
         .text(name + " Monthly Average Temperature: ");
+        
 // x value determined by month
 var monthScale = d3.scaleBand()
   .domain(months)
@@ -863,7 +867,7 @@ tooltip.append("rect")
     .style("opacity", 0.5);
 
   tooltip.append("text")
-    .attr("x", 50)
+    .attr("x", 70)
     .attr("dy", "1.2em")
     .style("text-anchor", "middle")
     .attr("font-size", "12px")

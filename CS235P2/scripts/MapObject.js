@@ -1,4 +1,7 @@
-//MapObject(id,1,1);
+/* Sign:
+	 *
+	 */
+
 function MapObject (mapID, inactiveColor, activeColor)
 {
 	this.mapID = mapID;
@@ -156,7 +159,8 @@ function MapObject (mapID, inactiveColor, activeColor)
 				// State click
 				state.shape.click (function () {
 					if (state.name == '') return;
-					
+					//panZoom.zoomIn(1);
+					//e.preventDefault();
 					//var newURL = baseURL + state.name + '/';				
 					drawElements(state.name);
 				});
@@ -175,7 +179,6 @@ function MapObject (mapID, inactiveColor, activeColor)
 					text.animate ({fill: '#ffffff'}, duration);
 					R.safari();
 				});
-				
 				// State mouse out
 				state.shape.mouseout (function () {
 					state.shape.animate ({fill: attr.fill}, duration);
