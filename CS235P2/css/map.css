@@ -1,10 +1,13 @@
 /* Sign:
-	 *
+	 * Title: CS235 Data Visualization Web Application
+	 * Authors: Yihang Tang, Jiehan Yao
+	 * Date: Apr.8th 2018
 	 */
+
 
 @charset "UTF-8";
 /* CSS Document */
-
+/* CSS file set map and related elements style */
 #canvas
 {
 	width: 800px;

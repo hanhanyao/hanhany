@@ -1,7 +1,11 @@
 /* Sign:
-	 *
+	 * Title: CS235 Data Visualization Web Application
+	 * Authors: Yihang Tang, Jiehan Yao
+	 * Date: Apr.8th 2018
 	 */
 function drawElements(name){
+    //Controller of all drawing functions
+    
     //console.log(name);
     var n = abbrState(name,'name');
     //console.log(n);
@@ -12,6 +16,8 @@ function drawElements(name){
 var isFirst = 0;
 var preimage;
 function showImage(name) {
+    //Make corresponded image 'visible' based on state name
+    
     //console.log(name);
     if(isFirst === 1){
         
@@ -27,7 +33,9 @@ function showImage(name) {
 }
 
 function drawHistogram(name){
+   //Draw corresponded Bar chart based on state name
    
+   //state temperatures 
    var states = {};
   states.Alabama = [
   {temp: 46, month: 'January'},
@@ -958,8 +966,9 @@ function toFahrenheit(c) {
 
 setInterval(convert, 5000);
 }
+
 function abbrState(input, to){
-    
+//convert between abbreviate and full name of states    
     var states = [
         ['Arizona', 'AZ'],
         ['Alabama', 'AL'],
