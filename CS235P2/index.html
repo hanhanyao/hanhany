@@ -9,7 +9,26 @@
 		<link href="css/Elements.css" rel = "stylesheet" type = "text/css"/>
 		<link href="css/raphael.pan-zoom.css" rel="stylesheet" type="text/css"/>
     </head>
+<style>
+	h2, h3, h4 {
+            text-align: center;
+        }
+	#image{
+		float: left;
+		width: 800px;
+		height: 400x;	
+		padding:15px 0px 25px;
+		
+	}
+	
+</style>
+
 <body>
+		<header>
+            <h2 style=>Data Visualization Web Application - US Travel</h1>
+			<h4 style=> by Yaojie Han and Yihang Tang</h3>
+        </header>
+		<h3 style=> Main Map </h3>
         <div id="canvas" class="butran">
 			<div id="mapControls"><a id="up" href="javascript:;"></a><a id="down" href="javascript:;"></a></div>
         	<p class="info-copy">Click on a state or select a state from the pull-down menu. Detailed traveling information about this state will be provided.</p>
@@ -73,10 +92,65 @@
             </div>
             <div id="paper"></div>
         </div>
-		<img id="my_images" style="visibility: hidden" src="images/California.jpg">
-        
-		<div id = "hist"></div>
 		
+		<h3 style=> State Image </h3>
+
+		<div id = "image">
+			<img id="California" style="display:none;" src="images/California.jpg">
+			<img id="Alabama" style="display:none;" src="images/Alabama.jpg">
+			<img id="Alaska" style="display:none;" src="images/Alaska.jpg">
+			<img id="Arizona" style="display:none;" src="images/Arizona.jpg">
+			<img id="Arkansas" style="display:none;" src="images/Arkansas.jpg">
+			<img id="Colorado" style="display:none;" src="images/Colorado.jpg">
+			<img id="Conneticut" style="display:none;" src="images/Conneticut.jpg">
+			<img id ="Delaware" style="display:none;" src= "images/Delaware.jpg">
+			<img id ="Florida" style="display:none;" src= "images/Florida.jpg">
+			<img id ="Georgia" style="display:none;" src= "images/Georgia.jpg">
+			<img id ="Hawaii" style="display:none;" src= "images/Hawaii.jpg">
+			<img id ="Idaho" style="display:none;" src= "images/Idaho.jpg">
+			<img id ="Illinois" style="display:none;" src= "images/Illinois.jpg">
+			<img id ="Indiana" style="display:none;" src= "images/Indiana.jpg">
+			<img id ="Iowa" style="display:none;" src= "images/Iowa.jpg">
+			<img id ="Kansas" style="display:none;" src= "images/Kansas.jpg">
+			<img id ="Kentucky" style="display:none;" src= "images/Kentucky.jpg">
+			<img id ="Louisiana" style="display:none;" src= "images/Louisiana.jpg">
+			<img id ="Maine" style="display:none;" src= "images/Maine.jpg">
+			<img id ="Maryland" style="display:none;" src= "images/Maryland.jpg">
+			<img id ="Massachusetts" style="display:none;" src= "images/Massachusetts.jpg">
+			<img id ="Michigan" style="display:none;" src= "images/Michigan.jpg">
+			<img id ="Minnesota" style="display:none;" src= "images/Minnesota.jpg">
+			<img id ="Mississippi" style="display:none;" src= "images/Mississippi.jpg">
+			<img id ="Missouri" style="display:none;" src= "images/Missouri.jpg">
+			<img id ="Montana" style="display:none;" src= "images/Montana.jpg">
+			<img id ="Nebraska" style="display:none;" src= "images/Nebraska.jpg">
+			<img id ="Nevada" style="display:none;" src= "images/Nevada.jpg">
+			<img id ="New Hampshire" style="display:none;" src= "images/New Hampshire.jpg">
+			<img id ="New Jersey" style="display:none;" src= "images/New Jersey.jpg">
+			<img id ="New Mexico" style="display:none;" src= "images/New Mexico.jpg">
+			<img id ="New York" style="display:none;" src= "images/New York.jpg">
+			<img id ="North Carolina" style="display:none;" src= "images/North Carolina.jpg">
+			<img id ="North Dakota" style="display:none;" src= "images/North Dakota.jpg">
+			<img id ="Ohio" style="display:none;" src= "images/Ohio.jpg">
+			<img id ="Oklahoma" style="display:none;" src= "images/Oklahoma.jpg">
+			<img id ="Oregon" style="display:none;" src= "images/Oregon.jpg">
+			<img id ="Pennsylvania" style="display:none;" src= "images/Pennsylvania.jpg">
+			<img id ="Rhode Island" style="display:none;" src= "images/Rhode Island.jpg">
+			<img id ="South Carolina" style="display:none;" src= "images/South Carolina.jpg">
+			<img id ="South Dakota" style="display:none;" src= "images/South Dakota.jpg">
+			<img id ="Tennessee" style="display:none;" src= "images/Tennessee.jpg">
+			<img id ="Texas" style="display:none;" src= "images/Texas.jpg">
+			<img id ="Utah" style="display:none;" src= "images/Utah.jpg">
+			<img id ="Vermont" style="display:none;" src= "images/Vermont.jpg">
+			<img id ="Virginia" style="display:none;" src= "images/Virginia.jpg">
+			<img id ="Washington" style="display:none;" src= "images/Washington.jpg">
+			<img id ="District of Columbia" style="display:none;" src= "images/Washington DC.jpg">
+			<img id ="West Virginia" style="display:none;" src= "images/West Virginia.jpg">
+			<img id ="Wisconsin" style="display:none;" src= "images/Wisconsin.jpg">
+			<img id ="Wyoming" style="display:none;" src= "images/Wyoming.jpg">
+		</div>
+        
+		<div id = "hist">
+		</div>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
         <script src="scripts/raphael.js" type="text/javascript" charset="utf-8"></script>
